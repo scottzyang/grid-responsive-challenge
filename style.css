@@ -150,3 +150,57 @@ label {
   top: -20px;
   transform: rotate(15deg);
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+  body {
+    display: block;
+  }
+
+  .dashboard {
+    margin: 3vw;
+    grid-gap: 15px;
+    grid-template-areas: "t t t"
+      "m m c"
+      "w w w"
+      "p l l"
+      "g g g";
+
+    /* parents, customize, level-up, and play row 3 */
+    grid-template-rows: 100px 200px 200px 100px 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+
+  .dashboard {
+    margin: 3vw;
+    grid-gap: 15px;
+    grid-template-areas: "t t"
+      "m c"
+      "p l"
+      "w w"
+      "g g";
+    grid-template-rows: 100px 200px 200px 100px 200px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+  .dashboard {
+    margin: 3vw;
+    grid-gap: 15px;
+    grid-template-areas: "t"
+      "m"
+      "c"
+      "w"
+      "l"
+      "p"
+      "g";
+    grid-template-rows: 100px 200px 200px 100px 200px 200px 200px;
+    grid-template-columns: 1fr;
+  }
+}
